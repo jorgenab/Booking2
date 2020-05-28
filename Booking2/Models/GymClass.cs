@@ -13,5 +13,8 @@ namespace Booking2.Models
         public TimeSpan Duration { get; set; }
         public DateTime EndTime { get { return StartTime + Duration; } }
         public String Decsription { get; set; }
+
+        // Navigation property
+        public virtual ICollection<ApplicationUserGymClass> AttendingMembers{ get; set; }
     }
 }
